@@ -10,36 +10,57 @@ body {
     margin: 0;
 }
 .container {
+    width: 100vw;
+    height: 100vh;
     background-color: rgb(225, 229, 237);
     overflow-y: scroll;
 }
 .title {
-    width: 80%;
+    width: 92%;
     font-family: "SurtTrial-Bold";
-    font-size: 12rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 0;
+    font-size: 4.2rem;
+    margin-top: 5rem;
+    margin-left: 1rem;
     text-align: left;
 }
 .img-wrapper {
     position: relative;
     justify-content: center;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 .description {
     position: absolute;
     display: flex;
     font-family: "SurtTrial-Light";
     color: dimgrey;
-    font-size: 2.1rem;
+    font-size: 1.2rem;
 }
-.float {
-    animation: float;
-    animation-duration: 1.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+@media only screen and (min-width: 500px) {
+    .title {
+        width: 80%;
+        font-size: 12rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 0;
+    }
+    .img-wrapper {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        flex-direction: row;
+    }
+    .description {
+        display: flex;
+        font-size: 2.1rem;
+    }
+    .float {
+        animation: float;
+        animation-duration: 1.8s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
 }
 @keyframes float {
     0% { transform: scale(0.9); } 
